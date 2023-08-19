@@ -1939,6 +1939,18 @@ ul.food-dishes li {
     margin-top: 20px;
     outline: none;
 }
+
+.name-form input[type="textarea"] {
+    color: #cfcfcf;
+    border: 1px solid #F2F2F2;
+    width: 100%;
+    height: 60px;
+    padding-left: 46px;
+    border-radius: 10px;
+    margin-top: 20px;
+    outline: none;
+}
+
 .name-form i {
     left: 2%;
     position: absolute;
@@ -1961,7 +1973,7 @@ ul.food-dishes li {
     border-radius: 20px;
     padding-left: 25px;
     height: 150px;
-    color: #cfcfcf;
+    color: black;
     border: 1px solid #F2F2F2;
     outline: none;
     margin-bottom: 10px;

@@ -305,7 +305,7 @@
 						<div class="join-courier content">
 							<h3>Get in touch with us</h3>
 							<p>We'd love to hear from you! Whether you have a question, feedback, or need assistance, our team is here to help</p>
-							<form class="blog-form" action="#" method="post" id="personID" onsubmit="return required();">
+							<form class="blog-form" action="/pages/contacts.html" method="POST" id="personID" onsubmit="return formrequired();return false;">
 								<div class="name-form">
 									<i class="fa-regular fa-user"></i>
 									<input type="text" id="name" placeholder="Enter your name">
@@ -315,7 +315,9 @@
 									<input type="text" id="email" placeholder="Enter your email">
 								</div>
 								<textarea placeholder="Enter your message" id="msg"></textarea>
-								<button class="button-price" onclick="formrequired()">Submit Application</button>
+								<!-- <button class="button-price">Submit Application</button> -->
+								<input type="submit" value="Submit Application" class="button-price">
+
 							</form>
 
 						</div>
@@ -411,25 +413,14 @@
     var email = document.getElementById("email").value;
     var msg = document.getElementById("msg").value;
    
-	if(!name)
-	{
-		alert("Please fill in the Name!")
-	}
-	if(!email)
-	{
-		alert("Please fill in the Email!")
-	}
-
-	if(!msg)
-	{
-		alert("Please fill in the Message!")
-	}
-
-
-    else if (!name && !email && !msg) {
-    alert("Please fill out all the fields!");
-    }
-	// alert("Thank You!") 
+	if ((name==null || name=="") && (msg==null || msg=="") && (email==null || email=="")){  
+  alert("Fields can't be blank");  
+  return false;  
+}
+else{
+	alert("Thank you!")
+} 
+return false;
 }
 	</script>
 </body>
